@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Mahasiswa - Yuliana Putri (2211501030)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Mahasiswa</h1>
+        <p class="identitas">
+            Nama: Yuliana Putri<br>
+            NIM: 2211501030<br>
+            Prodi: S1 Teknologi Informasi
+        </p>
+
+        <form id="formMahasiswa">
+            <input type="hidden" id="mahasiswaId">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" placeholder="Contoh: Yuliana Putri" required>
+            </div>
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" placeholder="Contoh: 2211501030" required>
+            </div>
+            <div class="button-group">
+                <button type="submit" id="btnSubmit" class="btn-primary">Simpan</button>
+                <button type="button" id="btnBatal" class="btn-secondary" style="display: none;">Batal</button>
+            </div>
+        </form>
+
+        <div id="alertBox" class="alert" style="display: none;"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Created At</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tabelMahasiswa">
+                <tr>
+                    <td colspan="5" style="text-align: center;">Memuat data...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
